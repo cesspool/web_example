@@ -1,0 +1,6 @@
+dao/NewsDAO.class
+config/ApplicationContextConfig.class
+config/WebMvcConfig.class
+model/News.class
+controller/MainRESTController.class
+config/SpringWebAppInitializer.class
