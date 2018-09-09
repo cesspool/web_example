@@ -16,12 +16,25 @@ public class NewsDAO {
     }
 
     private static void initNews() {
-        Calendar myCalendar = new GregorianCalendar(2014, 2, 11);
-        News news1 = new News("N01", "sport", "first", myCalendar.getTime() ,"sport");
-        News news2 = new News("N02", "another", "second", myCalendar.getTime(),"notSport");
+        Calendar myCalendar1 = new GregorianCalendar(2014, 2, 11);
+        Calendar myCalendar2 = new GregorianCalendar(2015, 3, 24);
+        Calendar myCalendar3 = new GregorianCalendar(2016, 4, 15);
+        Calendar myCalendar4 = new GregorianCalendar(2017, 5, 17);
+
+
+        News news1 = new News("N01", "box", "sport is something", myCalendar1.getTime() ,"sport");
+        News news2 = new News("N02", "limitless", "fil was very interesting", myCalendar2.getTime(),"films");
+        News news3 = new News("N03", "shrek", "cartoon was very fun", myCalendar3.getTime() ,"cartoons");
+        News news4 = new News("N04", "yoga", "relas is healthy", myCalendar4.getTime(),"relax");
+        News news5 = new News("N05", "lay", "fun is a fun", myCalendar3.getTime() ,"fun");
+        News news6 = new News("N06", "school", "education helps people to be clever", myCalendar4.getTime(),"education");
 
         newsMap.put(news1.getNumNews(), news1);
         newsMap.put(news2.getNumNews(), news2);
+        newsMap.put(news3.getNumNews(), news3);
+        newsMap.put(news4.getNumNews(), news4);
+        newsMap.put(news5.getNumNews(), news5);
+        newsMap.put(news6.getNumNews(), news6);
     }
 
     public List<News> getAllNews() {
@@ -49,7 +62,7 @@ public class NewsDAO {
     public List<News> getNewsByCategory(String category) {
         List<News> news = new ArrayList<>();
         for (Map.Entry<String, News> entry : newsMap.entrySet()){
-            if (entry.getValue().getCategory() == category) {
+            if (entry.getValue().getCategory().equals(category)) {
                 news.add(entry.getValue());
             }
         }
@@ -59,7 +72,7 @@ public class NewsDAO {
     public List<News> getNewsByName(String name) {
         List<News> news = new ArrayList<>();
         for (Map.Entry<String, News> entry : newsMap.entrySet()){
-            if (entry.getValue().getName() == name) {
+            if (entry.getValue().getName().equals(name)) {
                 news.add(entry.getValue());
             }
         }
@@ -69,7 +82,7 @@ public class NewsDAO {
     public List<News> getNewsByContent(String content) {
         List<News> news = new ArrayList<>();
         for (Map.Entry<String, News> entry : newsMap.entrySet()){
-            if (entry.getValue().getContent() == content) {
+            if (entry.getValue().getContent().contains(content)) {
                 news.add(entry.getValue());
             }
         }

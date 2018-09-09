@@ -1,1 +1,6 @@
-127.0.0.1 - - [09/Sep/2018:13:28:31 +0300] "GET /web-example/news HTTP/1.1" 200 333 http-bio-8080-exec-1 181
+127.0.0.1 - - [09/Sep/2018:15:51:10 +0300] "GET /web-example/news HTTP/1.1" 200 1037 http-bio-8080-exec-1 156
+127.0.0.1 - - [09/Sep/2018:15:51:28 +0300] "GET /web-example/news HTTP/1.1" 200 725 http-bio-8080-exec-2 75
+127.0.0.1 - - [09/Sep/2018:15:51:33 +0300] "GET /web-example/news/sport HTTP/1.1" 405 1045 http-bio-8080-exec-3 40
+127.0.0.1 - - [09/Sep/2018:15:51:44 +0300] "GET /web-example/news/category/sport HTTP/1.1" 200 125 http-bio-8080-exec-4 40
+127.0.0.1 - - [09/Sep/2018:15:52:33 +0300] "PUT /web-example/news HTTP/1.1" 415 1048 http-bio-8080-exec-5 80
+127.0.0.1 - - [09/Sep/2018:15:52:47 +0300] "PUT /web-example/news HTTP/1.1" 415 1048 http-bio-8080-exec-6 10

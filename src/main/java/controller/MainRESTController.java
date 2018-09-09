@@ -29,7 +29,7 @@ public class MainRESTController {
     }
 
 
-     @RequestMapping (value = "/news/{category}",
+     @RequestMapping (value = "/news/category/{category}",
                 method = RequestMethod.GET,
                 produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
      @ResponseBody
@@ -43,7 +43,7 @@ public class MainRESTController {
         }
      }
 
-     @RequestMapping (value = "/news/{name}",
+     @RequestMapping (value = "/news/name/{name}",
                 method = RequestMethod.GET,
                 produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
      @ResponseBody
@@ -57,7 +57,7 @@ public class MainRESTController {
         }
      }
 
-    @RequestMapping (value = "/news/{content}",
+    @RequestMapping (value = "/news/content/{content}",
             method = RequestMethod.GET,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
@@ -72,7 +72,7 @@ public class MainRESTController {
     }
 
     @RequestMapping (value = "/news",
-            method = RequestMethod.POST,
+            method = RequestMethod.PUT,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public News addNews(@RequestBody News news) {
@@ -80,7 +80,7 @@ public class MainRESTController {
     }
 
     @RequestMapping (value ="/news/{id}",
-            method = RequestMethod.PUT,
+            method = RequestMethod.POST,
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public News updateNews(@PathVariable("id") String id) {
